@@ -8,51 +8,124 @@
 }
 
 .container{
+    margin: 10px;
+    background: #fefefe;
+    width: 100%;
+    max-height: 130vh;
     display: grid;
-    grid-gap: 8px;
-    width: 800px;
-    height: 800px;
-    background: var(--color-secundary);
-    margin: 15px auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     grid-template-areas:
-    "MacBook_Air MacBook_Pro_App MacBook_Pro_App"
-    "MacBook_Air MacBook_Pro_App MacBook_Pro_App"
-    "MacBook_Air_Screen MacBook_Air_Screen MacBook_pro"
-    "MacBook_Air_Screen MacBook_Air_Screen MacBook_pro"
+    "nits nits nits Gps Gps Gps reloj carbon carbon carbon"
+    "nits nits nits reloj_grande reloj_grande reloj_grande reloj_grande carbon carbon carbon"
+    "elevation modular modular reloj_grande reloj_grande reloj_grande reloj_grande carbon carbon carbon"
+    "elevation modular modular reloj_grande reloj_grande reloj_grande reloj_grande 36HRS dive dive"
+    "band_colors band_colors band_colors reloj_grande reloj_grande reloj_grande reloj_grande customizable customizable customizable"
+    "s9 s9 on_Device new_ciclyn precision precision flashlight gesture gesture gesture"
+    "s9 s9 on_Device new_ciclyn precision precision flashlight gesture gesture gesture"
     ;
 }
 
-.container div{
-    background: var(--color-primary);
-    border: 1px solid var(--color-secundary);
+
+.item_1{
+    grid-area: nits;
+    display: grid;
+    place-items: center;
+}
+
+.item_2{
+    grid-area: Gps;
+}
+
+.item_3{
+    grid-area: reloj;
+}
+
+.item_4{
+    grid-area: carbon;
+}
+
+.item_5{
+    grid-area: elevation;
+}
+
+.item_6{
+    grid-area: modular;
+}
+
+.item_7{
+    grid-area: reloj_grande;
+}
+
+.item_8{
+    grid-area: 36HRS;
+}
+
+.item_9{
+    grid-area: dive;
+}
+
+.item_10{
+    grid-area: band_colors;
+}
+
+.item_11{
+    grid-area: customizable;
+}
+
+.item_12{
+    grid-area: s9;
+}
+
+.item_13{
+    grid-area: on_Device;
+}
+
+.item_14{
+    grid-area: new_ciclyn;
+}
+
+.item_15{
+    grid-area: precision;
+}
+
+.item_16{
+    grid-area: flashlight;
+}
+
+.item_17{
+    grid-area: gesture;
+}
+
+.item_1 img,
+.item_2 img,
+.item_3 img,
+.item_4 img,
+.item_5 img,
+.item_6 img,
+.item_7 img,
+.item_8 img,
+.item_9 img,
+.item_10 img,
+.item_11 img,
+.item_12 img,
+.item_13 img,
+.item_14 img,
+.item_15 img,
+.item_16 img,
+.item_17 img {
+    width: 100%;
+    height: 100%;
+    max-width: auto;
+    max-height: auto;
+    object-fit: contain;
+    background: #e7e9e8;
     border-radius: 10px;
 }
 
-.item__1{
-    grid-area: MacBook_Air;
-}
-
-.item__2{
-    grid-area: MacBook_Pro_App;
-}
-
-.item__3{
-    grid-area: MacBook_Air_Screen;
-}
-
-.item__4{
-    grid-area: MacBook_pro;
-}
-
 @media (width < 800px){
-    .container{
-        grid-template-areas:
-        "MacBook_Air MacBook_Air MacBook_Air"
-        "MacBook_Pro_App MacBook_Pro_App MacBook_Pro_App"
-        "MacBook_Air_Screen MacBook_Air_Screen MacBook_Air_Screen"
-        "MacBook_pro MacBook_pro MacBook_pro"
-        ;
+    .container img{
+        border: 3px solid red;
     }
 }
